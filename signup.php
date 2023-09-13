@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- Font Awesome -->
@@ -16,18 +16,24 @@
 <body>
     <div class="row" id="conteiner">
         <div class="col-sm-6 boxLogin">
-            <form action="/login.php" method="post">
-                <h1>Login</h1>
-                <?php if(isset($_GET['error'])) {?>
-                    <p class="text-danger"><?php echo $_GET['error'];?></p>
-                 <?php }?>   
-                <input type="text" name="username" placeholder="Username" />
+            <form action="/register-check.php" method="post">
+                <h1>Register</h1>
+                <?php if (isset($_GET['error'])) { ?>
+                    <p class="text-danger"><?php echo $_GET['error']; ?></p>
+                <?php } ?>
+
+                <?php if (isset($_GET['success'])) { ?>
+                    <p class="text-success"><?php echo $_GET['success']; ?></p>
+                <?php } ?>
+
+                <input type="text" name="username" placeholder="Username" value="<?php echo $_GET['username']; ?>" />
                 <input type="password" name="password" placeholder="Password" />
-                <button type="submit" name="login">Login</button>
-                
-                <a href="signup.php" class="ca">Tạo tài khoản mới
-                    <i class="fa fa-arrow-right"></i>
-                </a>
+                <input type="password" name="re_password" placeholder="Reply Password">
+                <button type="submit" name="register">Register</button>
+
+                <a href="index.php" class="ca">
+                    <i class="fa fa-arrow-left"></i>
+                    Đã có tài khoản</a>
             </form>
         </div>
         <div class="col-sm-6 boxLogin" id="Cadastre">
