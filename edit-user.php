@@ -44,12 +44,12 @@ if (empty($user_row)) {
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input type="password" id="myInput" name="new_password" value="<?php echo $user_row['passwords'] ?>">
+            <input type="text" id="myInput" name="new_password" value="<?php echo $user_row['passwords'] ?>">
 
         </div>
-        <input type="checkbox" onclick="myFunction()">Show Password
+        <!-- <input type="checkbox" onclick="myFunction()">Show Password -->
         <button type="submit" name="btnSave" class="btn btn-success">Save</button>
-        <a class="btn btn-primary" href="logout.php">logout</a>
+        <!-- <a class="btn btn-primary" href="logout.php">logout</a> -->
     </form>
     <?php
     if(isset($_POST['btnSave'])) {
@@ -75,7 +75,7 @@ if (empty($user_row)) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function myFunction() {
             var x = document.getElementById("myInput");
             if (x.type === "password") {
@@ -84,7 +84,7 @@ if (empty($user_row)) {
                 x.type = "password";
             }
         }
-    </script>
+    </script> -->
 
 </body>
 
