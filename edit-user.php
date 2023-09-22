@@ -3,7 +3,7 @@ session_start();
 
 include 'db_connect.php';
 
-$id = $_SESSION['id'];
+$id = $_GET['id'];
 $sql = "SELECT * FROM sys_users WHERE id='$id'";
 
 $result = mysqli_query($conn, $sql);
@@ -74,17 +74,6 @@ if (empty($user_row)) {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 
-
-    <!-- <script type="text/javascript">
-        function myFunction() {
-            var x = document.getElementById("myInput");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
-    </script> -->
 
 </body>
 

@@ -36,7 +36,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name']) && isset($_SESSION['
 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">Mật Khẩu <?php echo $_SESSION['password']; ?></a>
-                                    <a class="dropdown-item" href="edit-user.php">Chỉnh Sửa</a>
+                                    <a class="dropdown-item" href="/edit-user.php?id=<?php echo $_SESSION['id']; ?>">Chỉnh Sửa</a>
                                     <a class="dropdown-item" href="/login.php">Đăng Xuất</a>
                                 </div>
                             </div>
